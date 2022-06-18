@@ -1,0 +1,18 @@
+.wrapper{
+    width: 250px;
+}
+.sectionSize{
+    height: 50px;    
+}
+
+.red{    
+    background-color: red;    
+}
+
+.blue{    
+    background-color: blue;    
+}
+
+.orange{    
+    background-color: orange;    
+}
