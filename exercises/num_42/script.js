@@ -6,9 +6,10 @@
 const body = document.body;
 const login = document.getElementById("login");
 const password = document.getElementById("password");
-const loginError = document.createElement("div");
-const passwordError = document.createElement("div");
-
+const loginError = document.createElement("span");
+const passwordError = document.createElement("span");
+const container = document.getElementById("container");
+container.style.color = "red";
 function onlySpaces(str) {
   return str.trim().length === 0;
 }
@@ -25,7 +26,7 @@ function check() {
     login.value.length > 20
   ) {
     login.style.border = "solid red";
-    body.append(loginError);
+    container.append(loginError);
   }
 
   if (login === "") {
@@ -40,7 +41,7 @@ function check() {
 
   if (password.value === "" || onlySpaces(password.value) === true) {
     password.style.border = "solid red";
-    body.append(passwordError);
+    container.append(passwordError);
   }
 
   if (password.value === "") {

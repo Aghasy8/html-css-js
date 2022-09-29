@@ -6,11 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Exercises</title>
     <script src="script.js" defer></script>
+
+    <style>
+      #container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 0.5fr;
+      }
+    </style>
   </head>
   <body>
-    <input type="text" id="login" placeholder="enter login" />
-    <input type="text" id="password" placeholder="enter password" />
-    <button onclick="check()">Log In</button>
-    
+    <div id="container">
+      <input type="text" id="login" placeholder="enter login" />
+      <input type="text" id="password" placeholder="enter password" />
+      <button onclick="check()">Log In</button>
+    </div>
   </body>
 </html>
