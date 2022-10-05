@@ -11,13 +11,28 @@
       #container {
         display: grid;
         grid-template-columns: 1fr 1fr 0.5fr;
+        gap: 5px;
+      }
+
+      #containerLogin {
+        display: flex;
+        flex-direction: column;
+      }
+
+      #containerPassword {
+        display: flex;
+        flex-direction: column;
       }
     </style>
   </head>
   <body>
     <div id="container">
-      <input type="text" id="login" placeholder="enter login" />
-      <input type="text" id="password" placeholder="enter password" />
+      <div id="containerLogin">
+        <input type="text" id="login" placeholder="enter login" />
+      </div>
+      <div id="containerPassword">
+        <input type="text" id="password" placeholder="enter password" />
+      </div>
       <button onclick="check()">Log In</button>
     </div>
   </body>
