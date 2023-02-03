@@ -16,11 +16,15 @@
     padding-top: 35%;
 }
 
-.gameResult {
+span {
     margin: auto;
     margin-top: 10px;
-    background-color: aquamarine;    
+    background-color: rgb(28, 237, 28);    
     width: 40%;
     text-align: center;
+}
+
+.whosTurn {
+    background-color: darkorange; 
 }
 
