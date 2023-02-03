@@ -1,6 +1,7 @@
 const gridItems = document.querySelectorAll(".items");
 const button = document.querySelector("button");
 let gameResult = document.querySelector(".gameResult");
+let whosTurn = document.querySelector(".whosTurn");
 let one = document.querySelector(".one");
 let two = document.querySelector(".two");
 let three = document.querySelector(".three");
@@ -19,6 +20,7 @@ const eventListenerFunc = (event) => {
   event.target.innerText = player;
   allBoxesOccupied = gridItemsArray.every((box) => box.innerText !== "");
   player === x ? (player = o) : (player = x);
+  whosTurn.innerText = `"${player}" player's turn!`;
   event.target.removeEventListener("click", eventListenerFunc);
   if (
     (one.innerHTML &&
@@ -79,6 +81,7 @@ const eventListenerFunc = (event) => {
   }
 
   if (gameResult.innerText) {
+    whosTurn.innerText = "";
     gridItemsArray.map((item) => {
       item.removeEventListener("click", eventListenerFunc);
       return;
